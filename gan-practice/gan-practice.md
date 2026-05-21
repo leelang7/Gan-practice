@@ -27,7 +27,7 @@ Style Transfer를 수행하기 위한 모델은 `StyleTransferModel`이라는 �
 
 Style Transfer 모델에서 style loss와 content loss는 모두 새로 생성될 이미지와 style 또는 content 이미지의 feature map을 통해 계산합니다. 즉 새로 생성될 이미지의 feature map 행렬을 Fl*F**l*, style 또는 content 이미지의 feature map 행렬을 Pl*P**l* 이라고 한다면 다음과 같은 형태로 loss를 계산합니다.
 
-![image-20260521112952309](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20260521112952309.png)
+![alt text](<스크린샷 2026-05-21 112939.png>)
 
 Style 이미지의 경우엔 Fl*F**l*과 Pl*P**l*이 Gram 행렬을 의미한다는 것만 다를 뿐 본질적으로는 두 행렬의 각 원소값을 뺀 것을 제곱하여 모두 더하는 것입니다.
 
@@ -114,7 +114,7 @@ Style 이미지의 경우엔 Fl*F**l*과 Pl*P**l*이 Gram 행렬을 의미한다
 
 GAN에서는 생성자와 판별자 모델을 학습하기 위한 손실 함수가 따로 필요합니다. 그리고 나서 최종 손실 함수는 아래와 같이 둘을 더하는 것으로 계산합니다.
 
-![image-20260521112919913](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20260521112919913.png)
+![alt text](<스크린샷 2026-05-21 112853.png>)
 
 이번 실습에서는 이 두 손실 함수로 모델을 학습하는 과정을 코드를 통해 알아보도록 하겠습니다.
 
