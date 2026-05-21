@@ -1,6 +1,7 @@
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
+
 import tensorflow as tf
 from tensorflow.keras import Model
 from tensorflow.keras.applications.vgg19 import VGG19, preprocess_input
@@ -61,11 +62,11 @@ class StyleTransferModel(Model):
         
         # TODO: [지시사항 1번] 주어진 입력 이미지에서 style feature map을 뽑아내고
         # 이를 통해 gram matrix를 구하세요.
-        style_outputs = self.style_extractor(inputs)
-        style_outputs = [self.gram_matrix(style_output) for style_output in style_outputs]
+        style_outputs = None
+        style_outputs = None
         
         # TODO: [지시사항 2번] 주어진 입력 이미지에서 content feature map을 뽑아내세요.
-        content_output = self.content_extractor(inputs)
+        content_output = None
 
         content_dict = {content_name: value 
                         for content_name, value 
